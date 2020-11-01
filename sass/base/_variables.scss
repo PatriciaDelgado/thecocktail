@@ -1,0 +1,55 @@
+$design-width: 1200px;
+$design-width-media-query: $design-width + 80px;
+$content-padding--mobile: 32px;
+@function get-desktop-vw($target) {
+  $design-width: 1443 + 80;
+  $vw-context: ($design-width * .01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function get-desktop-vh($target) {
+  $design-height: 806;
+  $vw-context: ($design-height * .01) * 1px;
+  @return ($target / $vw-context) * 1vh;
+}
+
+@function get-mobile-vw($target) {
+  $design-width: 375;
+  $vw-context: ($design-width * .01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function get-mobile-vh($target) {
+  $design-height: 670;
+  $vw-context: ($design-height * .01) * 1px;
+  @return ($target / $vw-context) * 1vh;
+}
+
+@function get-rem($target) {
+  @return ($target * .1 / 1px) * 1rem;
+}
+
+//fonts
+$roboto-font: 'Roboto', sans-serif;
+
+$slab-font: 'Roboto Slab', serif;
+
+$bold-font: '700';
+
+
+//color
+
+$main-color: #003970;
+$secondary-color: #0C75C5;
+$text-color: #4E5055;
+$featured-color: #BE2227;
+$selected-color: #6DC138;
+$bg-grey: #FAFAFA;
+$white: #FFFFFF;
+
+
+
+//content width
+$contentWidth: 1200px;
+
+

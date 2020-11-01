@@ -1,0 +1,12 @@
+@import "corrections/corrections";
+@import "corrections/reset";
+
+@import "base/variables";
+@import "base/mixins";
+@import "base/typography";
+
+@import "theme/common";
+@import "theme/layout";
+
+@import "blocks/Header";
+@import "blocks/Footer";

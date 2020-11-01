@@ -1,0 +1,51 @@
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+
+
+@mixin transition{
+  transition: 0.2s ease-in-out;
+}
+
+/* ---- fonts ----- */
+@mixin roboto-regular{
+  font-family: $roboto-font;
+  font-weight: 400;
+}
+@mixin roboto-bold{
+  font-family: $roboto-font;
+  font-weight: 700;
+}
+
+@mixin slab-regular{
+  font-family: $slab-font;
+  font-weight: 400;
+}
+@mixin slab-bold{
+  font-family: $slab-font;
+  font-weight: 700;
+}
+
+/* ---- common ----- */
+
+@mixin flex-center{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}

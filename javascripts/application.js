@@ -1,0 +1,3 @@
+// This is the entrypoint for javascript
+// Import all your js files here
+// ...

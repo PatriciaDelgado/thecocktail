@@ -1,0 +1,61 @@
+// Add global styles for typography
+// and define classes for UI KIT font variants here
+// For example:
+// .t-h1 {
+//   font: $f-bold rem(24) / rem(38) $f-title;
+// }
+// ...
+
+
+h1 {
+  @include slab-bold;
+  font-size: get-rem(38px);
+  line-height: get-rem(43px);
+  color: $secondary-color;
+  &.small {
+    font-size: get-rem(24px);
+    line-height: get-rem(29px);
+  }
+}
+h2 {
+  @include slab-regular;
+  font-size: get-rem(24px);
+  line-height: get-rem(30px);
+  color: $main-color;
+}
+h3 {
+  @include roboto-bold;
+  font-size: get-rem(16px);
+  line-height: get-rem(21px);
+  color: $main-color;
+}
+h4 {
+  @include roboto-regular;
+  font-size: get-rem(18px);
+  line-height: get-rem(23px);
+  color: $main-color;
+  &.small {
+    font-size: get-rem(15px);
+    line-height: get-rem(20px);
+  }
+}
+p {
+  @include roboto-regular;
+  font-size: get-rem(20px);
+  line-height: get-rem(25px);
+  color: $text-color;
+  &.small {
+    font-size: get-rem(14px);
+    line-height: get-rem(19px);
+  }
+  &.tag {
+    letter-spacing: 1.52px;
+  }
+}
+
+a {
+
+}
+html.mobile {
+
+}
