@@ -1,0 +1,16 @@
+.star__list {
+  display: inherit;
+  margin-left: get-rem(10px);
+  &-item {
+    width: get-rem(12px);
+    height: get-rem(12px);
+    background-image: url("../images/star-orange.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: get-rem(5px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

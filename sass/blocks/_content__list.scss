@@ -1,0 +1,126 @@
+.content {
+  &__list {
+    padding: 0 get-rem(16px);
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      width: get-rem(268px);
+      background-color: white;
+      border-radius: get-rem(2px);
+      border: 1px solid rgba(91, 100, 105, .2);
+      padding: get-rem(24px) get-rem(24px) get-rem(17px);
+
+      display: flex;
+      flex-direction: column;
+      &.active {
+        border-color: $main-color;
+      }
+    }
+  }
+  &__item {
+    &-header {
+      text-align: center;
+      padding-bottom: get-rem(23px);
+      margin-bottom: get-rem(20px);
+      position: relative;
+      &:after {
+        content: '';
+        width: get-rem(82px);
+        height: get-rem(1px);
+        background-color: #C9E3F9;
+        @include horizontal-center;
+        bottom: 0;
+      }
+    }
+    &-body {
+      padding-bottom: get-rem(36px);
+      margin-bottom: auto;
+      ul {
+        li {
+          margin-bottom: get-rem(13px);
+          &:last-child {
+            margin-bottom: 0;
+          }
+          h4 {
+            padding-left: get-rem(12px);
+            position: relative;
+            &:before {
+              content: '';
+              width: get-rem(5px);
+              height: get-rem(5px);
+              background-color: $main-color;
+              position: absolute;
+              top: get-rem(10px);
+              left: 0;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+      div {
+        border: 1px solid blue;
+      }
+    }
+    &-footer {
+      width: 100%;
+      height: get-rem(46px);
+      background-color: $bg-grey;
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+      padding: 0 get-rem(15px);
+      &.active {
+        border: 1px solid $main-color;
+      }
+    }
+  }
+}
+
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+  position: relative;
+  padding-left: get-rem(20px);
+  cursor: pointer;
+  display: inline-block;
+  color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: get-rem(15px);
+  height: get-rem(15px);
+  border: 1px solid $text-color;
+  border-radius: 100%;
+  background: transparent;
+  @include vertical-center;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: get-rem(7px);
+  height: get-rem(7px);
+  background: #6DC138;
+  position: absolute;
+  @include vertical-center;
+  top: get-rem(10px);
+  left: get-rem(4px);
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+

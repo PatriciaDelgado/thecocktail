@@ -1,0 +1,16 @@
+.content__body {
+  padding: get-rem(40px) 0 0;
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: get-rem(40px);
+    h2 {
+      text-align: center;
+      position: relative;
+    }
+  }
+}
+
+.content__body.active { display: block; }
+.content__body.hide { display: none; }

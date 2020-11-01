@@ -59,7 +59,10 @@ p {
 }
 
 a {
-
+  text-decoration: none;
+}
+.slab-bold {
+  @include slab-bold;
 }
 html.mobile {
 
