@@ -20,4 +20,5 @@ body {
   font-size: get-rem(16px);
   line-height: get-rem(21px);
   @include roboto-regular;
+  background-color: $bg-grey;
 }

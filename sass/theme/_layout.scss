@@ -1,5 +1,11 @@
 .MainContainer {
   width: get-rem(1200px);
+  margin: 0 auto;
 }
-
+.Content {
+  width: get-rem(1200px);
+  padding: 0 get-rem(16px);
+  border: 1px solid red;
+  margin: 0 auto;
+}
 

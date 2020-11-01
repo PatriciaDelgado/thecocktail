@@ -1,7 +1,47 @@
-.Header {
-  width: get-rem(1200px);
-  border: 1px solid red;
-  font-size: get-rem(50px);
+.header {
+  height: get-rem(42px);
+  &__content {
+    background-color: $white;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  &__menu {
+    display: flex;
+    align-items: flex-end;
+    &-item {
+      padding: 0 get-rem(36px);
+      padding-bottom: get-rem(10px);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      color: $secondary-color;
+      &:after {
+        content: '';
+        width: 0%;
+        height: get-rem(2px);
+        background-color: $secondary-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width 0.2s ease-in-out;
+      }
+      &:hover {
+        color: $main-color;
+        &:after {
+          transition: width 0.2s ease-in-out;
+          width: 100%;
+        }
+      }
+      &.active {
+        color: $main-color;
+        &:after {
+          transition: width 0.2s ease-in-out;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 html.mobile {
 

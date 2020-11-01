@@ -52,6 +52,11 @@ p {
     letter-spacing: 1.52px;
   }
 }
+.menu-text {
+  @include slab-regular;
+  font-size: get-rem(16px);
+  color: $main-color;
+}
 
 a {
 
