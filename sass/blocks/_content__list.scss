@@ -103,11 +103,20 @@
         opacity: 0;
         transform: scale(0);
       }
-
-
     }
   }
 }
 
 
-
+@media (max-width: 780px) {
+  .content {
+    &__list {
+      border: 1px solid red;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .content__list {
+    border: 1px solid blue;
+  }
+}

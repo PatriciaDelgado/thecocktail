@@ -194,19 +194,18 @@ html {
 }
 
 html {
-  font-size: 0.6566vw;
+  font-size: 0.76923vw;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1250px) {
   html {
     font-size: 10px;
   }
 }
 
-html.mobile {
+/*html.mobile {
   -webkit-overflow-scrolling: touch;
-  font-size: 2.66667vw;
-}
-
+  font-size: get-mobile-vw(10px);
+}*/
 body {
   font-size: 1.6rem;
   line-height: 2.1rem;
@@ -418,6 +417,16 @@ body {
   transform: scale(0);
 }
 
+@media (max-width: 780px) {
+  .content__list {
+    border: 1px solid red;
+  }
+}
+@media (max-width: 360px) {
+  .content__list {
+    border: 1px solid blue;
+  }
+}
 .star__list {
   display: inherit;
   margin-left: 1rem;
@@ -527,7 +536,7 @@ body {
 .content__accordion-item .accordion__item-body .item__tab-body .more__info:after {
   content: '';
   width: 0.8rem;
-  height: 1.3rem;
+  height: 0.5rem;
   background-image: url("../images/angle-down-blue.svg");
   background-size: contain;
   background-position: center;
@@ -536,9 +545,16 @@ body {
   top: 50%;
   transform: translate3d(0, -50%, 0);
   right: 0;
+  transition: 0.70s;
+}
+.content__accordion-item .accordion__item-body .item__tab-body .more__info.active:after {
+  content: '';
+  transform: rotate(180deg);
+  transition: 0.70s;
 }
 .content__accordion-item .accordion__item-body .subtab {
   padding: 0 20rem 1.6rem 10rem;
+  display: none;
 }
 .content__accordion-item .accordion__item-body .subtab p.small {
   margin-bottom: 0.7rem;

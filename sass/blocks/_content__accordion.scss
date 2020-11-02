@@ -84,19 +84,28 @@
               &:after {
                 content: '';
                 width: get-rem(8px);
-                height: get-rem(13px);
+                height: get-rem(5px);
                 background-image: url("../images/angle-down-blue.svg");
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
                 @include vertical-center;
                 right: 0;
+                transition: 0.70s;
+              }
+              &.active {
+                &:after {
+                  content: '';
+                  transform: rotate(180deg);
+                  transition: 0.70s;
+                }
               }
             }
           }
         }
         .subtab {
           padding: 0 get-rem(200px) get-rem(16px) get-rem(100px);
+          display: none;
           p.small {
             margin-bottom: get-rem(7px);
           }

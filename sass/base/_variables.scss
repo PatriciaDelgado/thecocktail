@@ -1,8 +1,7 @@
 $design-width: 1200px;
-$design-width-media-query: $design-width + 80px;
-$content-padding--mobile: 32px;
+$design-width-media-query: $design-width + 50px;
 @function get-desktop-vw($target) {
-  $design-width: 1443 + 80;
+  $design-width: 1300;
   $vw-context: ($design-width * .01) * 1px;
   @return ($target / $vw-context) * 1vw;
 }
@@ -33,7 +32,6 @@ $content-padding--mobile: 32px;
 $roboto-font: 'Roboto', sans-serif;
 
 $slab-font: 'Roboto Slab', serif;
-
 $bold-font: '700';
 
 

@@ -11,10 +11,10 @@ html {
   }
 }
 
-html.mobile {
+/*html.mobile {
   -webkit-overflow-scrolling: touch;
   font-size: get-mobile-vw(10px);
-}
+}*/
 
 body {
   font-size: get-rem(16px);
