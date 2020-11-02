@@ -1,0 +1,112 @@
+.content__accordion {
+  padding: 0;
+
+  &-item {
+    border: 1px solid rgba(91, 100, 105, .2);
+    .accordion__item {
+      &-title {
+        width: 100%;
+        background: $white;
+        color: $text-color;
+        padding: get-rem(24px) 0 get-rem(32px) get-rem(67px);
+        display: flex;
+        align-items: baseline;
+        height: get-rem(86px);
+        position: relative;
+        cursor: pointer;
+        &:before {
+          content: '';
+          @include vertical-center;
+          left: get-rem(24px);
+          width: get-rem(12px);
+          height: get-rem(19px);
+          background-image: url("../images/angle-down-blue.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        h1 {
+         margin-right: get-rem(16px);
+        }
+        small {
+          font-size: get-rem(14px);
+        }
+        span {
+          position: absolute;
+          text-transform: uppercase;
+          color: $white;
+          background-color: $featured-color;
+          padding: get-rem(5px) get-rem(23px) get-rem(5px) get-rem(20px);
+          top: 0;
+          right: 0;
+        }
+      }
+      &-body {
+        padding: 0 get-rem(16px);
+        > li {
+          border: 1px solid rgba(91, 100, 105, .2);
+          margin-bottom: get-rem(16px);
+        }
+        &.inner {
+          padding-left: 1em;
+          overflow: hidden;
+          display: none;
+        }
+        .item__tab {
+          display: flex;
+          &-image {
+            width: get-rem(268px);
+            height: get-rem(180px);
+            margin-right: get-rem(32px);
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+          }
+          &-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: get-rem(24px) get-rem(24px) get-rem(16px) 0;
+            h3 {
+              margin-bottom: get-rem(8px);
+            }
+            p {
+              margin-bottom: auto;
+            }
+            .more__info {
+              cursor: pointer;
+              color: $secondary-color;
+              padding-right: get-rem(14px);
+              position: relative;
+              margin-top: get-rem(8px);
+              &:after {
+                content: '';
+                width: get-rem(8px);
+                height: get-rem(13px);
+                background-image: url("../images/angle-down-blue.svg");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                @include vertical-center;
+                right: 0;
+              }
+            }
+          }
+        }
+        .subtab {
+          border: 1px solid red;
+          padding: 0 get-rem(200px) get-rem(16px) get-rem(100px);
+          &__list {
+            height: get-rem(120px);
+            display: flex;
+            li {
+              width: get-rem(257px);
+              list-style-type: disc;
+            }
+          }
+        }
+      }
+    }
+  }
+}

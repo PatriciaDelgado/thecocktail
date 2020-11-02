@@ -48,9 +48,9 @@ p {
     font-size: get-rem(14px);
     line-height: get-rem(19px);
   }
-  &.tag {
-    letter-spacing: 1.52px;
-  }
+}
+.tag {
+  letter-spacing: 1.52px;
 }
 .menu-text {
   @include slab-regular;
