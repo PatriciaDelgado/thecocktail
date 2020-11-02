@@ -64,6 +64,9 @@ a {
 .slab-bold {
   @include slab-bold;
 }
+.roboto-bold {
+  @include roboto-bold
+}
 html.mobile {
 
 }

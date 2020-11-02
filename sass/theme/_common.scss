@@ -22,3 +22,18 @@ body {
   @include roboto-regular;
   background-color: $bg-grey;
 }
+
+.bullet {
+  padding-left: get-rem(11px);
+  position: relative;
+  &:before {
+    content: '';
+    width: get-rem(5px);
+    height: get-rem(5px);
+    background-color: $main-color;
+    position: absolute;
+    top: get-rem(10px);
+    left: 0;
+    border-radius: 50%;
+  }
+}

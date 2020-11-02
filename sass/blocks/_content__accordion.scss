@@ -39,6 +39,7 @@
           padding: get-rem(5px) get-rem(23px) get-rem(5px) get-rem(20px);
           top: 0;
           right: 0;
+          font-size: get-rem(12px);
         }
       }
       &-body {
@@ -95,14 +96,25 @@
           }
         }
         .subtab {
-          border: 1px solid red;
           padding: 0 get-rem(200px) get-rem(16px) get-rem(100px);
+          p.small {
+            margin-bottom: get-rem(7px);
+          }
           &__list {
             height: get-rem(120px);
             display: flex;
-            li {
+            margin-bottom: get-rem(30px);
+            &-col {
               width: get-rem(257px);
-              list-style-type: disc;
+              &:not(:last-child) {
+                margin-right: get-rem(43px);
+              }
+              p {
+                &:before {
+                  content: '';
+                  top: get-rem(5px);
+                }
+              }
             }
           }
         }
