@@ -11,10 +11,7 @@ html {
   }
 }
 
-/*html.mobile {
-  -webkit-overflow-scrolling: touch;
-  font-size: get-mobile-vw(10px);
-}*/
+
 
 body {
   font-size: get-rem(16px);
@@ -35,5 +32,19 @@ body {
     top: get-rem(10px);
     left: 0;
     border-radius: 50%;
+  }
+}
+
+
+@media (max-width: 780px) {
+  html {
+    -webkit-overflow-scrolling: touch;
+    font-size: get-mobile-vw(6px);
+  }
+}
+@media (min-width: 360px) and (max-width: 480px) {
+  html {
+    -webkit-overflow-scrolling: touch;
+    font-size: get-mobile-vw(10px);
   }
 }

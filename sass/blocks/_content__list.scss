@@ -111,12 +111,31 @@
 @media (max-width: 780px) {
   .content {
     &__list {
-      border: 1px solid red;
+      flex-wrap: wrap;
+      &-item {
+        width: 48%;
+        margin-bottom: get-rem(38px);
+      }
+    }
+    &__item{
+      &-footer {
+        [type=radio]:checked+label:after,
+        [type=radio]:not(:checked)+label:after {
+          top: get-rem(10.5px);
+          left: get-rem(4.1px);
+        }
+      }
     }
   }
 }
-@media (max-width: 360px) {
-  .content__list {
-    border: 1px solid blue;
+@media (min-width: 360px) and (max-width: 480px) {
+  .content {
+    &__list {
+      flex-wrap: wrap;
+      &-item {
+        width: 100%;
+        margin-bottom: get-rem(38px);
+      }
+    }
   }
 }
