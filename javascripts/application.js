@@ -38,11 +38,5 @@ $(document).ready(function() {
     $("#subtab").slideToggle(350);
   });
 
-  $('.content__list-item').click(function(e){
-    $('.active').removeClass('active');
-    $(this).addClass('active');
-    e.preventDefault();
-  });
-
 });
 
