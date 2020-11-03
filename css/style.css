@@ -315,6 +315,13 @@ body {
   width: 100%;
 }
 
+@media (min-width: 360px) and (max-width: 480px) {
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+  }
+}
 .content__body {
   padding: 4rem 0 0;
 }
@@ -346,6 +353,9 @@ body {
   }
 }
 @media (min-width: 360px) and (max-width: 480px) {
+  .content__body {
+    padding-top: calc(4.2rem + 4rem);
+  }
   .content__body-title {
     flex-direction: column;
   }

@@ -1,5 +1,5 @@
 .header {
-  height: get-rem(42px);
+  height: $header-height;
   &__content {
     background-color: $white;
     display: flex;
@@ -47,5 +47,9 @@
   }
 }
 @media (min-width: 360px) and (max-width: 480px) {
-
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+  }
 }
